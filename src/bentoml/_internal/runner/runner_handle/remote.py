@@ -208,6 +208,8 @@ class RemoteRunnerClient(RunnerHandle):
                 raise RemoteException("Failed to connect to runner server.") from e
 
         try:
+            print(resp.headers)
+            print(body)
             content_type = resp.headers["Content-Type"]
             assert content_type.lower().startswith("application/vnd.bentoml.")
         except (KeyError, AssertionError):
