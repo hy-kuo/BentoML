@@ -132,7 +132,7 @@ class RemoteRunnerClient(RunnerHandle):
                     )
                 ],
                 connector=self._get_conn(),
-                auto_decompress=True,
+                auto_decompress=False,
                 cookie_jar=jar,
                 connector_owner=False,
                 timeout=timeout,
